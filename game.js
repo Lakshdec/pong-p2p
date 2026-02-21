@@ -87,6 +87,10 @@ function runHostLoop(){
   function step(now){
     const dt = (now - last)/1000; last = now;
     if(!hostGame.paused){
+      // Apply host's own input to paddle 0
+      if(localInput.up) hostGame.paddles[0].y -= 6;
+      if(localInput.down) hostGame.paddles[0].y += 6;
+      
       hostGame.ball.x += hostGame.ball.vx * dt;
       hostGame.ball.y += hostGame.ball.vy * dt;
       if(hostGame.ball.y < 6 || hostGame.ball.y > canvas.height - 6) hostGame.ball.vy *= -1;
