@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Pong P2P — Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h3>Pong P2P — Player</h3>
+  <canvas id="c" width="800" height="400"></canvas>
+
+  <div class="controls">
+    <div class="btn-row">
+      <button id="createBtn">Create Room (Host)</button>
+      <button id="joinBtn">Paste Offer & Create Answer (Join)</button>
+      <button id="addIceBtn">Add ICE (Paste lines)</button>
+      <button id="copyBtn">Copy Output</button>
+    </div>
+    <div class="text-row">
+      <textarea id="signalOut" placeholder="Offer / Answer / ICE output"></textarea>
+      <textarea id="signalIn" placeholder="Paste remote Offer / Answer / ICE here"></textarea>
+    </div>
+    <p class="hint">Host runs the physics. Use the top button to create a room and copy the Offer. The other peer pastes it and creates an Answer. Exchange ICE lines if shown.</p>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

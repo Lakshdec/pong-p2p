@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Pong P2P — Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h3>Pong P2P — Admin</h3>
+
+  <div class="controls">
+    <div class="btn-row">
+      <button id="connectBtn">Connect to Host (Paste Offer)</button>
+      <button id="sendPause">Pause</button>
+      <button id="sendResume">Resume</button>
+      <button id="setScoreBtn">Set Score 3-2</button>
+    </div>
+    <div class="text-row">
+      <textarea id="signalOut" placeholder="Answer / ICE output"></textarea>
+      <textarea id="signalIn" placeholder="Paste host offer or ICE here"></textarea>
+    </div>
+    <p class="hint">Paste the host Offer into the input box, click Connect, then copy the Answer back to the host. Use admin buttons after DataChannel opens.</p>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
