@@ -10,17 +10,27 @@
   <canvas id="c" width="800" height="400"></canvas>
 
   <div class="controls">
-    <div class="btn-row">
+    <div class="mode-row">
+      <label for="modeSelect">Mode:</label>
+      <select id="modeSelect">
+        <option value="p2p">Online (Peer-to-peer)</option>
+        <option value="local">Local Two-Player (WASD + Arrows)</option>
+        <option value="single">Single Player vs CPU</option>
+      </select>
+      <button id="startLocalBtn">Start</button>
+    </div>
+
+    <div class="btn-row p2p-only">
       <button id="createBtn">Create Room (Host)</button>
       <button id="joinBtn">Paste Offer & Create Answer (Join)</button>
       <button id="addIceBtn">Add ICE (Paste lines)</button>
       <button id="copyBtn">Copy Output</button>
     </div>
-    <div class="text-row">
+    <div class="text-row p2p-only">
       <textarea id="signalOut" placeholder="Offer / Answer / ICE output"></textarea>
       <textarea id="signalIn" placeholder="Paste remote Offer / Answer / ICE here"></textarea>
     </div>
-    <p class="hint">Host runs the physics. Use the top button to create a room and copy the Offer. The other peer pastes it and creates an Answer. Exchange ICE lines if shown.</p>
+    <p class="hint">Host runs the physics. For online play use the P2P controls; for local or single-player choose the mode and click Start.</p>
   </div>
 
   <script src="game.js"></script>
