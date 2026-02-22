@@ -12,17 +12,29 @@
     <div class="mode-row">
       <strong>Admin Dashboard</strong>
     </div>
-    <div class="btn-row">
-      <button id="connectBtn">Connect to Host (Paste Offer)</button>
-      <button id="sendPause" class="secondary">Pause</button>
-      <button id="sendResume" class="secondary">Resume</button>
-      <button id="setScoreBtn" class="secondary">Set Score 3-2</button>
+    
+    <!-- Email Authentication Section -->
+    <div id="authSection" class="mode-row">
+      <input type="email" id="adminEmail" placeholder="Enter admin email" />
+      <button id="loginBtn">Login</button>
+      <p id="authMessage" style="color: red; font-size: 12px; display: none;"></p>
     </div>
-    <div class="text-row">
-      <textarea id="signalOut" placeholder="Answer / ICE output"></textarea>
-      <textarea id="signalIn" placeholder="Paste host offer or ICE here"></textarea>
+    
+    <!-- Admin Controls (hidden until authenticated) -->
+    <div id="adminControls" style="display: none;">
+      <div class="btn-row">
+        <button id="connectBtn">Connect to Host (Paste Offer)</button>
+        <button id="sendPause" class="secondary">Pause</button>
+        <button id="sendResume" class="secondary">Resume</button>
+        <button id="setScoreBtn" class="secondary">Set Score 3-2</button>
+        <button id="logoutBtn" class="secondary">Logout</button>
+      </div>
+      <div class="text-row">
+        <textarea id="signalOut" placeholder="Answer / ICE output"></textarea>
+        <textarea id="signalIn" placeholder="Paste host offer or ICE here"></textarea>
+      </div>
+      <p class="hint">Paste the host Offer into the input box, click Connect, then copy the Answer back to the host. Use admin buttons after DataChannel opens.</p>
     </div>
-    <p class="hint">Paste the host Offer into the input box, click Connect, then copy the Answer back to the host. Use admin buttons after DataChannel opens.</p>
   </div>
 
   <script src="admin.js"></script>
