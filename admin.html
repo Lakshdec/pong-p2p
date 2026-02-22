@@ -13,9 +13,10 @@
       <strong>Admin Dashboard</strong>
     </div>
     
-    <!-- Email Authentication Section -->
-    <div id="authSection" class="mode-row">
+    <!-- Email + Password Authentication -->
+    <div id="authSection" class="mode-row" style="flex-direction: column; gap: 8px;">
       <input type="email" id="adminEmail" placeholder="Enter admin email" />
+      <input type="password" id="adminPassword" placeholder="Enter admin password" />
       <button id="loginBtn">Login</button>
       <p id="authMessage" style="color: red; font-size: 12px; display: none;"></p>
     </div>
@@ -27,16 +28,3 @@
         <button id="sendPause" class="secondary">Pause</button>
         <button id="sendResume" class="secondary">Resume</button>
         <button id="setScoreBtn" class="secondary">Set Score 3-2</button>
-        <button id="logoutBtn" class="secondary">Logout</button>
-      </div>
-      <div class="text-row">
-        <textarea id="signalOut" placeholder="Answer / ICE output"></textarea>
-        <textarea id="signalIn" placeholder="Paste host offer or ICE here"></textarea>
-      </div>
-      <p class="hint">Paste the host Offer into the input box, click Connect, then copy the Answer back to the host. Use admin buttons after DataChannel opens.</p>
-    </div>
-  </div>
-
-  <script src="admin.js"></script>
-</body>
-</html>
